@@ -1,0 +1,1 @@
+curl "https://atlas.ripe.net/api/v2/measurements/$1/latest/?fields=created_timestamp,is_error,error_message,total_hops,last_median_rtt,last_hop_responded,is_success,last_hop_errors&use_keys=1" > $1.ripe.json

@@ -1,0 +1,11 @@
+Create measurements - gathers a full list of connected probes and creates a traceroute measurement to a target hostname
+UUID added as part of the measurement description to keep all created "grouped" together.
+
+create_measure/create_measurements.sh TARGETHOST
+
+
+Using the UUID from created measurements:
+Pull all measurements ProbeID, RTT, hops:
+analyze_measure/run.sh UUID
+Decorate the probeid with metadata
+analyze_measure/decorate.sh UUID
