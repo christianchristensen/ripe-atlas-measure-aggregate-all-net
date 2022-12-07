@@ -16,3 +16,132 @@ analyze_measure/decorate.sh UUID
 ---
 
 Note files created during intermediate steps will cleanup to UUID run folders on success.
+
+---
+
+Example run: measuring from all connected probes to google.com: one-off measurements will take ~10m between creation and analysis
+# in create_measure folder
+(venv1) $ ./create_measurements.sh google.com
+29D88338-2209-45ED-B771-5C98D3ED8257
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 1554k  100 1554k    0     0   575k      0  0:00:02  0:00:02 --:--:--  576k
+xaa : {"measurements":[47694803]}###
+xab : {"measurements":[47694805]}###
+xac : {"measurements":[47694808]}###
+xad : {"measurements":[47694809]}###
+xae : {"measurements":[47694810]}###
+xaf : {"measurements":[47694811]}###
+xag : {"measurements":[47694812]}###
+xah : {"measurements":[47694813]}###
+xai : {"measurements":[47694814]}###
+xaj : {"measurements":[47694815]}###
+xak : {"measurements":[47694816]}###
+xal : {"measurements":[47694818]}###
+xam : {"measurements":[47694820]}###
+xan : {"measurements":[47694821]}###
+xao : {"measurements":[47694822]}###
+xap : {"measurements":[47694823]}###
+
+
+(venv1) $ ./run.sh 29D88338-2209-45ED-B771-5C98D3ED8257
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 16884  100 16884    0     0  12707      0  0:00:01  0:00:01 --:--:-- 12781
+47694823
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 49448    0 49448    0     0  35254      0 --:--:--  0:00:01 --:--:-- 35497
+47694822
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 49819    0 49819    0     0  28623      0 --:--:--  0:00:01 --:--:-- 28697
+47694821  
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 49196    0 49196    0     0  30293      0 --:--:--  0:00:01 --:--:-- 30367
+47694820
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 49265    0 49265    0     0  29361      0 --:--:--  0:00:01 --:--:-- 29447
+47694818
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 49272    0 49272    0     0  34859      0 --:--:--  0:00:01 --:--:-- 34944
+47694816
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 49337    0 49337    0     0  37749      0 --:--:--  0:00:01 --:--:-- 37893
+47694815
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 49327    0 49327    0     0  35841      0 --:--:--  0:00:01 --:--:-- 35926
+47694814  
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 49261    0 49261    0     0  16012      0 --:--:--  0:00:03 --:--:-- 16040
+47694813  
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 49504    0 49504    0     0  37807      0 --:--:--  0:00:01 --:--:-- 37934
+47694812  
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 49369    0 49369    0     0  34010      0 --:--:--  0:00:01 --:--:-- 34094
+47694811  
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 49231    0 49231    0     0  34057      0 --:--:--  0:00:01 --:--:-- 34188
+47694810  
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 49423    0 49423    0     0  36178      0 --:--:--  0:00:01 --:--:-- 36287
+47694809  
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 49467    0 49467    0     0  30907      0 --:--:--  0:00:01 --:--:-- 30994
+47694808  
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 49877    0 49877    0     0  33965      0 --:--:--  0:00:01 --:--:-- 34045
+47694805  
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 49435    0 49435    0     0  32614      0 --:--:--  0:00:01 --:--:-- 32695
+47694803  
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 49547    0 49547    0     0  31660      0 --:--:--  0:00:01 --:--:-- 31760
+
+
+(venv1) $ ./decorate.sh 29D88338-2209-45ED-B771-5C98D3ED8257
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 4147k  100 4147k    0     0  1231k      0  0:00:03  0:00:03 --:--:-- 1234k
+CSV Join ASN to RIPE Probe list
+CSV Join Probe&ASN info to UUID measurement
+
+(venv1) $ wc -l 29D88338-2209-45ED-B771-5C98D3ED8257_a/29D88338-2209-45ED-B771-5C98D3ED8257.*
+   11820 29D88338-2209-45ED-B771-5C98D3ED8257_a/29D88338-2209-45ED-B771-5C98D3ED8257.csv
+   11820 29D88338-2209-45ED-B771-5C98D3ED8257_a/29D88338-2209-45ED-B771-5C98D3ED8257.decorated.csv
+
+(venv1) $ head 29D88338-2209-45ED-B771-5C98D3ED8257_a/29D88338-2209-45ED-B771-5C98D3ED8257.csv
+created_timestamp,is_error,error_message,total_hops,last_median_rtt,last_hop_responded,is_success,probe_id
+1670388627,false,,15,38.356,true,true,"1000"
+1670388644,false,,8,14.286,true,true,"1000000"
+1670388634,false,,6,1.271,true,true,"1000003"
+1670388634,false,,6,0.769,true,true,"1000004"
+1670388637,false,,6,0.658,true,true,"1000006"
+1670388634,false,,8,5.203,true,true,"1000010"
+1670388685,false,,19,4.917,true,true,"1000011"
+1670388636,false,,8,9.497,true,true,"1000016"
+1670388596,false,,9,1.134,true,true,"1000020"
+(venv1) $ head 29D88338-2209-45ED-B771-5C98D3ED8257_a/29D88338-2209-45ED-B771-5C98D3ED8257.decorated.csv 
+created_timestamp,is_error,error_message,total_hops,last_median_rtt,last_hop_responded,is_success,probe_id,address_v4,address_v6,asn_v4,asn_v6,country_code,day,first_connected,is_anchor,is_public,latitude,longitude,prefix_v4,prefix_v6,probe,status,status_name,status_since,total_uptime,asname
+1670388627,False,,15,38.356,True,True,1000,144.134.9.223,2001:8003:7198:a700:220:4aff:fec7:b000,1221,1221,AU,20221205,1307310425,False,True,-27.4225,153.0275,144.132.0.0/14,2001:8000::/20,https://atlas.ripe.net/api/v2/probes/1000/,1,Connected,1670211865,319193580,1221 ASN-TELSTRA Telstra Corporation Ltd AU
+1670388644,False,,8,14.286,True,True,1000000,45.83.6.19,2a10:3781:2413:1:a00:27ff:fee9:ec84,206238,206238,NL,20221205,1570010448,False,True,52.3775,4.9075,45.83.4.0/22,2a10:3780::/29,https://atlas.ripe.net/api/v2/probes/1000000/,1,Connected,1670186993,84143854,206238 FREEDOMINTERNET Freedom Internet BV NL
+
+
+Intermediate files in:
+        create_measure/29D88338-2209-45ED-B771-5C98D3ED8257/
+        analyze_measure/29D88338-2209-45ED-B771-5C98D3ED8257_a/
